@@ -1,0 +1,58 @@
+Algoritmo CompraSupermercado
+	Definir precioLeche, precioPollo, precioManzana Como Real
+	Definir precioTotalLeche, precioTotalPollo, precioTotalManzana Como Real
+	Definir precioTotalSuperA, precioTotalSuperB Como Real
+	Definir supermercadoEconomico Como Texto
+	precioLeche = 0
+	precioPollo = 0
+	precioManzana = 0
+	precioTotalLeche = 0
+	precioTotalPollo = 0
+	precioTotalManzana = 0
+	precioTotalSuperA = 0
+	precioTotalSuperB = 0
+	supermercadoEconomico = ""
+	//a. Ver el precio de la botella de leche, del pollo y de la manzana
+	Escribir "Precio Leche Super A"
+	Leer precioLeche
+	Escribir "Precio Pollo Super A"
+	Leer precioPollo
+	Escribir "Precio Manzana Super A"
+	Leer precioManzana
+	//b. Calcular el precio de cada conjunto de productos
+	//Lista compra: 3 botellas de leche, 1 pollo y 4 manzanas
+	precioTotalLeche = precioLeche * 3
+	precioTotalPollo = precioPollo * 1
+	precioTotalManzana = precioManzana * 4
+	//c. Calcular el precio total mediante la suma de los precios
+	//de cada conjunto de productos
+	precioTotalSuperA = precioTotalLeche + precioTotalPollo + precioTotalManzana
+	//2. Para el supermercado "B":
+	//a. Ver el precio de la botella de leche, del pollo y de la manzana
+	Escribir "Precio Leche Super B"
+	Leer precioLeche
+	Escribir "Precio Pollo Super B"
+	Leer precioPollo
+	Escribir "Precio Manzana Super B"
+	Leer precioManzana
+	//b. Calcular el precio de cada conjunto de productos
+	precioTotalLeche = precioLeche * 3
+	precioTotalPollo = precioPollo * 1
+	precioTotalManzana = precioManzana * 4
+	//c. Calcular el precio total mediante la suma de los precios
+	//de cada conjunto de productos
+	precioTotalSuperB = precioTotalLeche + precioTotalPollo + precioTotalManzana
+	//3. Comparar el precio total de la compra en el supermercado "A"
+	//con el precio total en el supermercado "B"
+	Si precioTotalSuperA > precioTotalSuperB Entonces
+		supermercadoEconomico = "Supermercado B es más económico"
+	Sino 
+		supermercadoEconomico = "Supermercado A es más económico"
+		Si precioTotalSuperA = precioTotalSuperB Entonces
+			supermercadoEconomico = "El precio de ambos supermercados es igual"
+		SiNo
+		FinSi
+	FinSi
+	//4. Obtener el supermercado donde la compra es más económica
+	Escribir supermercadoEconomico
+FinAlgoritmo
